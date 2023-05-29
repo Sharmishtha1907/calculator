@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: bisque;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #disp{
+        margin: 5px;
+        padding: 9px;
+        display: inline-block;
+        border: 1px solid;
+        border-color: rgb(17, 1, 1);
+
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body align="center">
+    <h1>Basic Calculator</h1>
+    <br />
+    <br />
+    <div id="disp">
+      <input type="text" id="res" readonly />
+      <br />
+      <br />
+      <input type="button" onclick="addtoexp('1')" value="1" />
+      <input type="button" onclick="addtoexp('2')" value="2" />
+      <input type="button" onclick="addtoexp('3')" value="3" />
+      <input type="button" onclick="addtoexp('+')" value="+" />
+      <input type="button" onclick="addtoexp('**2')" value="x^2" />
+      <br />
+      <br />
+      <input type="button" onclick="addtoexp('4')" value="4" />
+      <input type="button" onclick="addtoexp('5')" value="5" />
+      <input type="button" onclick="addtoexp('6')" value="6" />
+      <input type="button" onclick="addtoexp('-')" value="-" />
+      <input type="button" onclick="addtoexp('**0.5')" value="\sqrt{x}" />
+      <br />
+      <br />
+      <input type="button" onclick="addtoexp('7')" value="7" />
+      <input type="button" onclick="addtoexp('8')" value="8" />
+      <input type="button" onclick="addtoexp('9')" value="9" />
+      <input type="button" onclick="addtoexp('*')" value="*" />
+      <input type="button" onclick="addtoexp('Math.sin(')" value="sin" />
+      <br />
+      <br />
+      <input type="button" onclick="clr()" value="CE">
+      <input type="button" onclick="addtoexp('0')" value="0" />
+      <input type="button" onclick="addtoexp('.')" value="." />
+      <input type="button" onclick="addtoexp('/')" value="/" />
+      <input type="button" onclick="addtoexp('Math.cos(')" value="cos" />
+      <br />
+      <br />
+      <input type="button" onclick="addtoexp('Math.tan(')" value="tan" />
+      <input type="button" onclick="addtoexp('Math.PI')" value="pi" />
+      <input type="button" onclick="addtoexp('Math.E')" value="e" />
+      <input type="button" onclick="addtoexp('(')" value="(" />
+      <input type="button" onclick="addtoexp(')')" value=")" />
+      <input type="button" onclick="result()" value="=" />
+    </div>
+    <script>
+      function addtoexp(val) {
+        console.log("22");
+        document.getElementById("res").value += val;
+      }
+
+      function clr() {
+        console.log("111");
+        document.getElementById("res").value = "";
+      }
+      function result() {
+        console.log("3");
+        var exp = document.getElementById("res").value;
+        document.getElementById("res").value = eval(exp);
+      }
+    </script>
+  </body>
+</html>
